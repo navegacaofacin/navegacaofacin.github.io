@@ -1,0 +1,9 @@
+[
+  ["siga em frente","c25 c26"],
+  ["siga em frente","c26 c27"],
+  ["vire à direita","c27 c28"],
+  ["siga em frente","c28 c38"],
+  ["siga em frente","c38 c8"],
+  ["vire à esquerda","c8 c9"],
+  ["porta no fundo do corredor","c9 r622"]
+]
