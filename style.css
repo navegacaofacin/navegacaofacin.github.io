@@ -1,0 +1,29 @@
+body {
+  background-color: #3949AB;
+}
+
+#main {
+  color: white;
+  text-align: center;
+}
+
+button, select {
+  border: solid 1px white;
+  color: #eee;
+  border-radius:5px;
+  background: blue;
+}
+
+#qrcode-CSS {
+  background-image:url(images/qr-code-1.png);
+  background-size: 200px 130px;
+  width: 200px;
+  height: 130px;
+}
+
+#num_sala-CSS {
+  background-image:url(images/num_sala.png);
+  background-size: 200px 130px;
+  width: 200px;
+  height: 130px;
+}

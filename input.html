@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Navegação - PUCRS/FACIN</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div id="main">
+    <h2>Navegação PUCRS/FACIN</h2>
+    <p>
+      Você está na
+      <select id="from">
+        <option selected disabled hidden>posição atual</option>
+        <option id="c25">Entrada Ipiranga</option>
+        <option id="c31">Entrada Bento Gonçalves</option>
+        <option id="r601">Sala 601</option> <option id="r602">Sala 602</option> <option id="r603">Sala 603</option> <option id="r604">Sala 604</option> <option id="r605">Sala 605</option>
+        <option id="r606">Sala 606</option> <option id="r607">Sala 607</option> <option id="r608">Sala 608</option> <option id="r609">Sala 609</option> <option id="r610">Sala 610</option>
+        <option id="r611">Sala 611</option> <option id="r612">Sala 612</option> <option id="r613">Sala 613</option> <option id="r614">Sala 614</option> <option id="r615">Sala 615</option>
+        <option id="r616">Sala 616</option> <option id="r617">Sala 617</option> <option id="r618">Sala 618</option> <option id="r619">Sala 619</option> <option id="r620">Sala 620</option>
+        <option id="r621">Sala 621</option> <option id="r622">Sala 622</option> <option id="r623">Sala 623</option> <option id="r624">Sala 624</option> <option id="r625">Sala 625</option>
+        <option id="r626">Sala 626</option> <option id="r627">Sala 627</option> <option id="r628">Sala 628</option> <option id="r629">Sala 629</option> <option id="r630">Sala 630</option>
+        <option id="r631">Sala 631</option> <option id="r632">Sala 632</option> <option id="r633">Sala 633</option> <option id="r634">Sala 634</option> <option id="r635">Sala 635</option>
+        <option id="r636">Sala 636</option> <option id="r637">Sala 637</option> <option id="r638">Sala 638</option> <option id="r639">Sala 639</option> <option id="r640">Sala 640</option>
+        <option id="r641">Sala 641</option> <option id="r642">Sala 642</option> <option id="r643">Sala 643</option> <option id="r644">Sala 644</option> <option id="r645">Sala 645</option>
+        <option id="r646">Sala 646</option> <option id="r647">Sala 647</option> <option id="r648">Sala 648</option> <option id="r649">Sala 649</option> <option id="r650">Sala 650</option>
+        <option id="r651">Sala 651</option> <option id="r652">Sala 652</option> <option id="r653">Sala 653</option> <option id="r654">Sala 654</option>
+      </select>
+    </p>
+    <p>e gostaria de localizar </p>
+    <p>
+      <select id="toPerson" onchange="$('#toRoom').prop('selectedIndex',0);">
+        <option selected disabled hidden>uma pessoa</option>
+        <option id="r622">Prof. Felipe Meneguzzi</option>
+        <option id="r623">Prof. Márcia de Borba Campos</option>
+        <option id="r624">Prof. Márcio Sarroglia Pinho</option>
+        <option id="r624">Prof. Milene Silveira</option>
+        <option id="r625">Prof. Renata Vieira</option>
+        <option id="r626">Prof. Rafael Heitor Bordini</option>
+        <option id="r627">Prof. Tiago Coelho Ferreto</option>
+      </select>
+      ou
+      <select id="toPlace" onchange="$('#toPerson').prop('selectedIndex',0);">
+        <option selected disabled hidden>uma sala</option>
+        <option id="r601">Sala 601</option> <option id="r602">Sala 602</option> <option id="r603">Sala 603</option> <option id="r604">Sala 604</option> <option id="r605">Sala 605</option>
+        <option id="r606">Sala 606</option> <option id="r607">Sala 607</option> <option id="r608">Sala 608</option> <option id="r609">Sala 609</option> <option id="r610">Sala 610</option>
+        <option id="r611">Sala 611</option> <option id="r612">Sala 612</option> <option id="r613">Sala 613</option> <option id="r614">Sala 614</option> <option id="r615">Sala 615</option>
+        <option id="r616">Sala 616</option> <option id="r617">Sala 617</option> <option id="r618">Sala 618</option> <option id="r619">Sala 619</option> <option id="r620">Sala 620</option>
+        <option id="r621">Sala 621</option> <option id="r622">Sala 622</option> <option id="r623">Sala 623</option> <option id="r624">Sala 624</option> <option id="r625">Sala 625</option>
+        <option id="r626">Sala 626</option> <option id="r627">Sala 627</option> <option id="r628">Sala 628</option> <option id="r629">Sala 629</option> <option id="r630">Sala 630</option>
+        <option id="r631">Sala 631</option> <option id="r632">Sala 632</option> <option id="r633">Sala 633</option> <option id="r634">Sala 634</option> <option id="r635">Sala 635</option>
+        <option id="r636">Sala 636</option> <option id="r637">Sala 637</option> <option id="r638">Sala 638</option> <option id="r639">Sala 639</option> <option id="r640">Sala 640</option>
+        <option id="r641">Sala 641</option> <option id="r642">Sala 642</option> <option id="r643">Sala 643</option> <option id="r644">Sala 644</option> <option id="r645">Sala 645</option>
+        <option id="r646">Sala 646</option> <option id="r647">Sala 647</option> <option id="r648">Sala 648</option> <option id="r649">Sala 649</option> <option id="r650">Sala 650</option>
+        <option id="r651">Sala 651</option> <option id="r652">Sala 652</option> <option id="r653">Sala 653</option> <option id="r654">Sala 654</option>
+      </select>
+    </p>
+    <p>Quando estiver pronto pressione Ir.</p>
+    <button onclick="buildURL()">Ir</button>
+    <p>Ou retorne a tela inicial</p>
+    <button onclick="parent.location='index.html'">Retornar</button>
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+
+function buildURL() {
+  var selectFrom     = document.getElementById("from");
+  var selectToPerson = document.getElementById("toPerson");
+  var selectToPlace  = document.getElementById("toPlace");
+
+  var from = selectFrom.options[selectFrom.selectedIndex].id;
+  var person = selectToPerson.options[selectToPerson.selectedIndex].id;
+  var place = selectToPlace.options[selectToPlace.selectedIndex].id;
+
+  if (from == "") {
+    alert("Preencha o campo posição atual.");
+    return;
+  }
+
+  var to;
+  if (person == "") {
+    if (place == "") {
+      alert("Preencha o campo de pessoa ou sala que queres encontrar.");
+      return;
+    } else {
+      to = place;
+    }
+  } else {
+    to = person;
+  }
+  parent.location='path.html?' + "from=" + from + "&to=" + to;
+}
+
+</script>
+
+</html>

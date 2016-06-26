@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Navegação PUCRS/FACIN</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <div id="main">
+    <h2>Navegação PUCRS/FACIN</h2>
+    <p>Siga o caminho abaixo</p>
+    <p id="stepinfo"></p>
+    <img id="picture" src="" alt="Imagem não encontrada."/>
+    <p>
+      <button onclick="update(-1)">Voltar</button>
+      <button onclick="update(1)">Avançar</button>
+    </p>
+    <p>Ou retorne a tela inicial</p>
+    <button onclick="parent.location='index.html'">Retornar</button>
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script>
+
+// Convert path.html?from=c25&to=r622 to variables
+var input = window.location.search.split("&");
+var from = input[0].split("=")[1];
+var to = input[1].split("=")[1];
+var index = 1;
+var plan;
+$.getJSON("plans/" + from + " " + to + ".json", function( json ) {
+  plan = json;
+  writeStep();
+});
+
+function update(direction) {
+  if (direction == 1) {
+    if (index < plan.length) {
+      index += 1
+      writeStep();
+    }
+  } else if (direction == -1) {
+    if (index > 1) {
+      index -= 1;
+      writeStep();
+    }
+  }
+}
+
+function writeStep() {
+  document.getElementById("stepinfo").innerHTML = "Passo " + index + " de " + plan.length + " - " + plan[index-1][0];
+  var picture = document.getElementById("picture");
+  picture.src = "images/" + plan[index-1][1] + ".jpg";
+  picture.alt = "Imagem do caminho, passo " + index + " de " + plan.length;
+}
+
+</script>
+
+</html>
