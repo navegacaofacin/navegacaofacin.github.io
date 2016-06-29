@@ -1,23 +1,44 @@
-# Guia Site
+# Navega√ß√£o Facin
 
 ## Arquivos
-- **index.html** contÈm a p·gina inicial onde se decide qual mÈtodo utilizar (sala como referÍncia ou QRcode).
-- **input.html** contÈm a p·gina onde o usu·rio completa seu estado atual (sala ou entrada) e estado objetivo (sala ou pessoa).
-- **path.html** contÈm a p·gina que mostra o caminho que o usu·rio deve fazer atravÈs de fotos.
-- **style.css** contÈm as configuraÁıes de cor e posicionamento dos elementos.
-- **plans/** contÈm os planos prÈ-compilados em formato JSON, os argumentos de cada aÁ„o devem corresponder as fotos disponÌveis.
-- **images/** contÈm as fotos do ambiente.
+- **index.html** cont√©m a p√°gina inicial onde se decide qual m√©todo utilizar (sala como refer√™ncia ou QRcode).
+- **input.html** cont√©m a p√°gina onde o usu√°rio completa seu estado atual (sala ou entrada) e estado objetivo (sala ou pessoa).
+- **path.html** cont√©m a p√°gina que mostra o caminho que o usu√°rio deve fazer atrav√©s de fotos.
+- **style.css** cont√©m as configura√ß√µes de cor e posicionamento dos elementos.
+- **plans/** cont√©m os planos pr√©-compilados em formato JSON, os argumentos de cada a√ß√£o devem corresponder as fotos dispon√≠veis.
+- **images/** cont√©m as fotos do ambiente.
 
-Uma URL com informaÁıes È gerada ao clicar o bot„o **Ir** da p·gina input.html no formato ``input.html?from=X&to=Y``, onde X e Y correspondem aos estados inicial e final do usu·rio.
+Uma URL com informa√ß√µes √© gerada ao clicar o bot√£o **Ir** da p√°gina input.html no formato ``input.html?from=X&to=Y``, onde X e Y correspondem aos estados inicial e final do usu√°rio.
 Um plano deve existir com o nome ``X Y.json`` na pasta ``plans``, tais planos poderiam ser gerados sob demanda e armazenados ou gerados em lote de cada sala para outra.
-Na lista de pessoas o ID das mesmas representa a sala onde elas est„o, sendo assim os planos sempre s„o de um lugar para outro.
-Os campos pessoa e sala destinos s„o exclusivos e limpam o outro caso modificados.
-O usu·rio È avisado caso um campo esteja em branco (posiÁ„o atual ou as duas possibilidades de descrever o destino).
+Na lista de pessoas o ID das mesmas representa a sala onde elas est√£o, sendo assim os planos sempre s√£o de um lugar para outro.
+Os campos pessoa e sala destinos s√£o exclusivos, quando um campo √© alterado o outro volta ao valor default.
+O usu√°rio √© avisado caso um campo esteja em branco (posi√ß√£o atual ou as duas possibilidades de descrever o destino).
+
+O arquivo JSON segue o seguinte formato:
+
+```JSON
+[
+  ["siga em frente", "r652 c45"],
+  ["siga em frente", "c45 c46"],
+  ["siga em frente", "c46 c29"],
+  ["siga em frente", "c29 c20"],
+  ["siga em frente", "c20 c19"],
+  ["siga em frente", "c19 c23"],
+  ["siga em frente", "c23 c24"],
+  ["siga em frente", "c24 c25"],
+  ["siga em frente", "c25 c26"],
+  ["siga em frente", "c26 c27"],
+  ["siga em frente", "c27 c28"],
+  ["siga em frente", "c28 c47"],
+  ["siga em frente", "c47 r623"]
+]
+```
+
 
 ## Servidor
 
-V·rios servidores est„o disponÌveis dentro de diversos interpretadores.
-O servidor do Ruby pode ser executado com o comando abaixo e mantÈm o site em <http://localhost:8888/>.
+V√°rios servidores est√£o dispon√≠veis dentro de diversos interpretadores.
+O servidor do Ruby pode ser executado com o comando abaixo e mant√©m o site em <http://localhost:8888/>.
 
 ```Shell
 cd DTA-FinalProject/src-site
